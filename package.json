@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/codedre/Supermarket-Register#readme",
   "dependencies": {
-    "jasmine-node": "^1.14.5",
-    "requirejs": "^2.1.22"
+    "jasmine-node": "^1.14.5"
   }
 }
