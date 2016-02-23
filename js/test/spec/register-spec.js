@@ -3,7 +3,7 @@ var register = require("../../model/register.js");
 
 describe("The Input Values", function() {
 
-  it("should be a string that is 16 characters long with dashes after the first 3 groups of 4 characters ", function() {
+  it ("should be a string that is 16 characters long with dashes after the first 3 groups of 4 characters ", function() {
 
     // Three valid codes passed in a string should return an array with length of three
     var testSetOne = "A12T-4GH7-QPL9-3N4M;YRT6-72AS-K736-L4AR;65P1-UDGM-XH2M-LQW2";
@@ -13,7 +13,7 @@ describe("The Input Values", function() {
 
   });
 
-  it("should throw an error if it does not have dashes separating the digits", function() {
+  it ("should throw an error if it does not have dashes separating the digits", function() {
     // 16 characters code without dashes should throw error
     var testSetTwo = "A12T4GH7QPL93N4M";
 
@@ -44,7 +44,13 @@ describe("The Input Values", function() {
     expect(testArray2.length).toBe(1);
   });
 
-  it("should be case insensitive", function(){});
+  it ("should be case insensitive", function() {
+
+    var testSetSix = "yrt6-72AS-k736-L4aR";
+    var testArray3 = register.parseProductCodes(testSetSix);
+
+    expect(testArray3.length).toBe(1);
+  });
 });
 
 // describe("The Output", function(){
