@@ -8,10 +8,13 @@
   <body>
     <h1>Supermarket Cashier Program</h1>
     <h3>Enter product codes to calculate total</h3>
-    <textarea id="product-code-textarea" placeholder="Input string of product codes: 'A12T-4GH7Y-QPL9-3N4MA;YRT6-72AS-K736-L4AR;65P1-UDGM-XH2M-LQW2'" rows="8" cols="40"></textarea>
+
+    <input id="product-code-input" placeholder="Input string of product codes: 'A12T-4GH7Y-QPL9-3N4MA;YRT6-72AS-K736-L4AR;65P1-UDGM-XH2M-LQW2'">
     <button id="product-code-submit-button">Submit</button>
-    <br><br>
-    <h3>Total: <span class="total-price"></span></h3>
-    <script src="main.js"></script>
+    <p></p>
+    <h3>Total: <span class="total-price">$0</span></h3>
+
+    <script src="js/model/register-browser.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
