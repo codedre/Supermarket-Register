@@ -53,8 +53,20 @@ describe("The Input Values", function() {
   });
 });
 
-// describe("The Output", function(){
-//   it("should be a string", function(){});
-//   it("should start with '$'");
-//
-// });
+describe("The Output", function(){
+
+  beforeEach( function() {
+    this.data = ["YRT6-72AS-K736-L4AR", "65P1-UDGM-XH2M-LQW2", "A12T-4GH7-QPL9-3N4M"];
+  });
+
+  it ("should return a number", function(){
+    var output = register.calculateTotal(this.data);
+    expect(output).toEqual(jasmine.any(Number));
+  });
+
+  it ("should return a number that is the sum of each product code item", function(){
+    var output = register.calculateTotal(this.data);
+    expect(output).toEqual(10.98);
+  });
+
+});
