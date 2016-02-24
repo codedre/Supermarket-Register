@@ -11,4 +11,5 @@ Practice writing unit tests and continuous integration
 ### Dependencies
 ```
 npm install: jasmine-node;
+npm test : to run test
 ```
